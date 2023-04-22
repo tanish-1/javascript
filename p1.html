@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const promiseObj = new Promise((resolve, reject) => {
+                // do asynchronous operation
+                let rq = false;
+                if (rq == true) {
+                    resolve("Request Success");
+                } else {
+                    reject("Request Failed");
+                }
+            }).then(
+                (value) => {
+                    console.log(value);
+                },
+                // (error) => {
+                //     console.log(error);
+                // },
+            ).catch((error) => {
+                console.log(error);
+            }, ).finally(() => {
+                console.log("finally")
+            })
+            // const p = new Promise((resolve, reject) => {
+            //     let num = 10;
+            //     resolve(num)
+            // }).then(
+            //     (value) => {
+            //         console.log(value);
+            //         return value + 10;
+            //     },
+            //     // (error)=>{console.log(error)}
+            // ).then((value) => {
+            //     console.log(value);
+            // })
+
+        // promise
+        console.log("Start");
+
+        function getName(name) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Inside the function")
+                    resolve(name);
+                }, 2000);
+            })
+        }
+
+        function getHobbies(name) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Inside function Hobbies");
+                    resolve(['cricket', 'reading']);
+                }, 2000)
+            })
+        }
+        getName("Sonam")
+            .then(nm => getHobbies(nm))
+            .then(hobby => console.log(hobby))
+    </script>
+</body>
+
+</html>

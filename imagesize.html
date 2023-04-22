@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   .container-img{
+    text-align: center;
+   }
+    #img{
+height: 234px;
+width: 343px;
+    }
+    #btn{
+    
+    }
+</style>
+</head>
+<body>
+    <div class="container-img">
+        <img src="download.jpg" id="img">
+        <button id="btn">Button</button>
+    </div>
+
+    <div class="container-addlist" id="list">
+        <input type="text" placeholder="type" id="txt">
+        <button id="btn2">Add</button>
+    </div>
+    <div class="lists">
+        <input type="text" placeholder="type" id="txt2">
+        <button id="btn3">Add</button>
+        <ul id="menu">
+            <!-- <li>Home</li>
+            <li>Contact</li> -->
+        </ul>
+    </div>
+
+    <div class="para" id="para">
+        <button id="btn4">button</button>
+    </div>
+        <script>
+const size = () =>{
+    if(img.style.height == "234px" && img.style.width == "343px"){
+        img.style.height = "445px";
+        img.style.width = "378px";
+    } else{
+        img.style.height = "234px";
+        img.style.width = "343px";
+    }
+}
+
+btn.addEventListener("click",size)
+
+const add = () =>{
+    let p = document.createElement("p");
+    p.textContent = txt.value;
+    document.body.appendChild(p);
+}
+
+btn2.addEventListener("click",add)
+//             btn.addEventListener("click",normal);
+
+
+const addlist = () =>{
+    let li = document.createElement("li");
+    li.textContent = txt2.value;
+    menu.appendChild(li);
+   let a = menu.lastElementChild;
+   a.addEventListener("click",()=>{
+     menu.removeChild(a);
+   })
+}
+btn3.addEventListener("click",addlist);
+
+const addp = () => {
+    let p = document.createElement("p");
+    p.textContent = "paragraph";
+    para.appendChild(p);
+    let l = para.C
+    l.addEventListener("click",()=>{
+        para.removeChild(l);
+    });
+}
+btn4.addEventListener("click",addp);
+        </script>
+  
+</body>
+</html>

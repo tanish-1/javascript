@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7f9b2ad30a.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .img_slider{
+         /* background-color: brown; */
+         width: 100vw;
+         height: 443px;
+         display: flex;
+         justify-content: center;
+         position: relative;
+        }
+        .icon1{
+            position: absolute;
+            left: 1202px;
+            top: 234px;
+            z-index: 1;
+           font-size: 38px;
+        }
+        .icon2{
+            position: absolute;
+            left: 43px;
+            z-index: 1;
+            font-size: 38px;
+            top: 234px;
+        }
+        .img1{
+           transform: translate(-28vw);
+           /* animation: img1 5s ease-in-out forwards; */
+        }
+    
+        @keyframes img1{
+            0%{
+                transform: translate(-28vw);
+            }
+            60%{
+                transform: translate(52vw);
+            }
+            100%{
+                transform: translate(-28vw);
+            }
+        }
+        .img2{
+            transform: translate(0vw);
+        /* animation: img2 3s ease-in-out forwards; */
+        }
+        @keyframes img2 {
+            0%{
+                transform: translate(0vw);
+            }
+            100%{
+                transform: translate(74vw);
+            }
+        }
+        .img3{
+            transform: translate(24vw);
+            /* animation: img3 4s ease-in-out 3s forwards; */
+        }
+        @keyframes img3 {
+            0%{
+                transform: translate(24vw);
+            }
+            /* 20%{
+               transform: translate(20vw);
+            }
+            40%{
+                transform: translate(0vw);
+            }
+            60%{
+                transform: translate(-10vw);
+            } */
+            100%{
+                transform: translate(-51vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="img_slider" id="image">
+        <div id="arrow_icon1" class="icon1">
+            <i class="fa-solid fa-chevron-right" onclick="abc()" id="i"></i>
+        </div>
+        <div id="arrow_icon2" class="icon2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="img1" id="img1">
+            <img src="download.jpg" alt="" srcset="" height="443px">
+        </div>
+        <div class="img2" id="img2">
+            <img src="OIP.jpg" height="443px">
+        </div>
+        <div class="img3" id="img3">
+            <img src="OIP2.jpg" alt="" srcset="" height="443px">
+        </div>
+    </div>
+    <script>
+        const abc=() =>{
+            const i = document.getElementById("i");
+            const img1 = document.getElementById("img1");
+            const img2 = document.getElementById("img2");
+            const img3 = document.getElementById("img3");
+            img2.style.animation = "img2 3s ease-in-out forwards";
+            img1.style.animation = "img1 5s ease-in-out forwards";
+            img3.style.animation = "img3 4s ease-in-out 3s forwards";
+            // const arr = [img1 , img2 , img3];
+            // for(let i of arr){
+
+            // }
+        }
+    </script>
+</body>
+</html>

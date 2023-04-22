@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+  display: grid;
+    background-color: aqua;
+    grid-template-columns: auto auto auto auto;
+   grid-gap: 12px ;
+
+}
+.box1{
+ background-color: orange;
+
+}
+.box2{
+    background-color: orange;
+}
+.box3{
+    background-color: orange;
+  
+}
+.box4{
+    background-color: orange;
+}
+.box2{
+    background-color: orange;
+}
+.box2{
+    background-color: orange;
+}
+.box2{
+    background-color: orange;
+}
+/* #a1{
+    height: 32px;
+   width: 65px;
+   margin: 0px 3px;
+} */
+/* #a2{
+    height: 32px;
+   width: 65px;
+   margin: 0px 3px;
+} */
+#a3{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a4{
+    height: 32px;
+   width: 65px;
+   margin: 0px 3px;
+}
+#a5{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a6{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a7{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a8{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a9{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a10{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a11{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a12{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}
+#a13{
+    height: 32px;
+   width: 35px;
+   margin: 0px 3px;
+}

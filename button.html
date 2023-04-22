@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: red;
+            color: white;
+            height: 23vh;
+          
+        }
+    </style>
+</head>
+<body>
+    <p id="p_1">a = [1,2,3,4,5]</p>
+    <input type="text" id="text" placeholder="Type..">
+    <button id="btn" onclick="abc()">Choose</button>
+    <p id="p_2"></p>
+   <div class="box" id="box">
+    <p id="p_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit possimus doloribus.</p>
+    <button id="btn2" onclick="xyz()">Click</button>
+   </div>
+   <div class="sum" id="sum">
+    <button id="a1" onclick="a()">1</button>
+    <button id="a2" onclick="sum()">+</button>
+    <button id="a3" onclick="b()">2</button>
+    <button id="a2" onclick="res()">=</button>
+    <input type="text" id="res">
+   </div>
+    <script>
+       
+        const text = document.getElementById("text").value;
+        // const p_1 = document.getElementById("p_1");
+        const btn  = document.getElementById("btn");
+        const btn2  = document.getElementById("btn2");
+      
+        const abc = () => {
+            let text1 = document.getElementById("text").value;
+            let key = parseInt(text1);
+            const p = document.getElementById("p_2");
+           
+            let ar = [1,2,3,4,5];
+          
+            for(let i = 0; i<ar.length; i++){
+                if(ar[i] == key) {
+                   let p1 = document.createElement("p");
+                   p1.innerHTML = key;
+                   p.appendChild(p1);
+                    // console.log(key);  
+                    break;  
+                
+            } 
+    
+            // else{
+            //      p1 = document.createElement("p");
+            //        p1.innerHTML = "could not find element in array : " + ar;
+            //        p.appendChild(p1);
+            //     // console.log("could not find element in array :" + ar);
+            // }
+            }
+                for(let j=0 ; j<ar.length ; j++){
+                    if(ar[j]!=key){
+                       let p2 = document.createElement("p");
+                           p2.innerHTML = "could not find element in array : " + ar;
+                           p.appendChild(p2);
+                           break;
+                    }
+            }
+    }
+ 
+   const xyz = () => {
+          const d = document.getElementById("box");
+          const p5 = document.getElementById("p_3");
+        //   const para = document.createElement("p");
+        //   para.innerHTML = "hello there";
+        //   d.appendChild(para);
+        d.style.backgroundImage = "url('download.jpg')";
+        d.style.backgroundSize = "cover";
+d.style.backgroundRepeat = "no-repeat";
+          btn2.style.background = "orange";
+        //   p5.style.padding = "0px 50px";
+        //   p5.style.top = "14px";
+        //   d.style.display = "flex";
+        //   d.style.alignItems = "center";
+
+        //    if(d.style.background !="white" &&  d.style.color !="black" &&  d.style.alignItems != 'left'){
+        //     d.style.background = "red";
+        //     d.style.color = "white";
+        //     d.style.alignItems = 'center';
+        //    }
+        //    else{
+        //     d.style.background = "white";
+        //    }
+        }
+    const a = () =>{
+      const a = document.getElementById("a1");
+      const res = document.getElementById("res");
+        res.value += "1"
+    }
+    const sum = () =>{
+      const b = document.getElementById("a2");
+      const res = document.getElementById("res");
+        res.value += "+"
+    }
+    const b = () =>{
+      const c = document.getElementById("a2");
+      const res = document.getElementById("res");
+        res.value += "2"
+    }
+const res = () =>{
+    const res = document.getElementById("res");
+    res.value = eval(res.value)
+}
+    </script>
+</body>
+</html>

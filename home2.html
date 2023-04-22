@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-bg-color: red;
+            --main-color: white;
+        }
+ .container{
+    background-color: var(--main-bg-color);
+     color: var(--main-color);
+     height: 134px;
+     width: 134px;
+ }
+ .container-2{
+    margin-top: 3vh;
+    background-color: aqua;
+    color: var(--main-color);
+     height: 134px;
+     width: 134px;
+ }
+ .container-3{
+    margin-top: 3vh;
+    background-color:blue;
+     color: var(--main-color);
+     height: 134px;
+     width: 134px;
+ }
+ .yellow{
+    background-color: yellowgreen;
+ }
+    </style>
+</head>
+<body>
+    <div class="container" id="box">
+       <p>this is para-1</p>
+     <p id="p1">sum</p>
+    </div>
+    <div class="container-2"  id= "box3">
+         <button id="btn1">1</button>
+         <button id="btn2">+</button>
+         <button id="btn3">2</button>
+         <button id="btn4">=</button>
+         <input type="text" id="txt">
+    </div>
+    <div class="container-3" id="box2" onmousemove="ra()" onmouseout="no()">
+    <p>This is para-2</p>
+    <p id="p2">sum</p>
+</div>
+
+    <script>
+        let a = 0;
+        let b = 0
+        const abc = ()=>{
+              p1.innerHTML = a+=1;
+          }
+          const xyz = () => {
+              p1.innerHTML =`sum is now = ${a}`;
+          }
+        let box = document.getElementById("box");
+        box.addEventListener("mouseover", abc)
+        box.addEventListener("mouseout", xyz)
+       
+        const ra = () =>{
+          p2.innerHTML = b+=1;
+        }
+        const no = () =>{
+            p2.innerHTML = `sum is now = ${b}`;
+        }
+        const gh = (x) =>{
+            x.style.backgroundColor = "yellow";
+        }
+        const one = () =>{
+            txt.value += "1";
+        }
+        const plus = () =>{
+            txt.value += "+";
+        }
+        const two = () =>{
+            txt.value += "2";
+        }
+        const res = () =>{
+         const input = txt.value;
+         const operator = ['+', '-'];
+         let result = 0;
+        let currentoperator = "+";
+        let currentnum = "";
+         for(let i=0; i<input.length; i++){
+             const ch = input[i];
+             if(operator.includes(ch)){
+                result = calculate(result , parseInt(ch) ,currentoperator)
+                currentnum = "";
+                currentoperator = ch;
+             }
+             else if(!isNaN(ch)){
+              curentnum+= ch;
+             }
+          
+         }
+         result = calculate(result , parseInt(ch) ,currentoperator)
+             txt.value = result.toString();
+        }
+        const calculate =(num1 ,num2 , operator)=>{
+            switch(operator){
+                case '+':
+                    return num1 + num2;
+        }
+    }
+        btn1.addEventListener("click",one)    
+        btn2.addEventListener("click",plus)    
+        btn3.addEventListener("click",two)    
+        btn4.addEventListener("click",res)    
+    </script>
+</body>
+</html>

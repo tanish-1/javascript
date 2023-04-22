@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [1,2,3,4];
+    let b =  a.map((i,index)=>{
+      console.log(i);
+       return i+index;
+        })
+            console.log(b);
+let arr = [1,23,3,4,54];
+const func = (i)=>{
+    return i<4;
+}
+let c = arr.filter(func)
+console.log(c);
+
+let arr2 = [1,2,3,4];
+let d = arr2.reduce((i,j)=>{
+    return i+j;
+})
+
+console.log(d);
+
+let da= new Date();
+let f = da.getHours();
+let ff = da.getMinutes();
+let fff = da.getSeconds();
+let dff = da.getDate();
+console.log(f,ff,fff,dff);
+console.log(da);
+let da2 = new Date("2022-03-2");
+console.log(da2);
+    </script>
+</body>
+</html>
